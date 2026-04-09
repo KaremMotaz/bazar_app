@@ -1,8 +1,8 @@
 import 'package:bazar_app/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/helpers/app_regex.dart';
-import '../../../../../core/theming/app_styles.dart';
-import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../core/helpers/app_regex.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
 
 class ResetPasswordViewBody extends StatefulWidget {
   const ResetPasswordViewBody({super.key});

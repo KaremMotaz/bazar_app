@@ -1,6 +1,8 @@
+import 'package:bazar_app/core/theming/app_colors.dart';
+import 'package:bazar_app/features/auth/presentation/widgets/terms_and_data_policy_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theming/app_styles.dart';
+import '../../../../core/theming/app_styles.dart';
 import 'already_have_an_account.dart';
 import 'signup_form.dart';
 
@@ -10,22 +12,27 @@ class SignupViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text("Sign Up", style: AppStyles.bold24),
+            const SizedBox(height: 8),
             Text(
-              "قم بالتسجيل الآن وابدأ في استكشاف كل ما يقدمه تطبيقنا. نحن متحمسون للترحيب بك في مجتمعنا!",
-              style: AppStyles.regular14.copyWith(),
+              "Create account and choose favorite menu",
+              style: AppStyles.regular16.copyWith(color: AppColors.appGray),
             ),
-            const SizedBox(height: 36),
+            const SizedBox(height: 24),
             const SignUpForm(),
             const SizedBox(height: 25),
             const Align(
               alignment: AlignmentDirectional.center,
               child: AlreadyHaveAnAccount(),
             ),
+            // Spacer(),
+            SizedBox(height: 20),
+            TermsAndDataPolicyWidget(),
           ],
         ),
       ),

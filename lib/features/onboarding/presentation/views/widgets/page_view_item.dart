@@ -1,3 +1,5 @@
+import 'package:bazar_app/core/helpers/constants.dart';
+import 'package:bazar_app/core/services/cache_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 // import '../../../../../core/services/cache_helper.dart';
@@ -24,7 +26,7 @@ class PageViewItem extends StatelessWidget {
     return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        
+
         children: [
           Align(
             alignment: AlignmentDirectional.centerStart,
@@ -35,11 +37,8 @@ class PageViewItem extends StatelessWidget {
               maintainSize: true,
               child: TextButton(
                 onPressed: () {
-                  // CacheHelper.set(
-                  //   key: kHasSeenOnboarding,
-                  //   value: true,
-                  // );
-                  GoRouter.of(context).pushReplacement(Routes.signInView);
+                  CacheHelper.set(key: kHasSeenOnboarding, value: true);
+                  context.pushReplacement(Routes.signInView);
                 },
                 child: Text(
                   "Skip",

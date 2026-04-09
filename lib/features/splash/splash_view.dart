@@ -16,11 +16,12 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
+    super.initState();
+
     Future.delayed(const Duration(seconds: 2), () {
-      // ignore: use_build_context_synchronously
+      if (!mounted) return;
       context.pushReplacement(Routes.onboardingView);
     });
-    super.initState();
   }
 
   @override

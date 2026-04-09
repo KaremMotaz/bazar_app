@@ -8,6 +8,12 @@ class BazarApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white
+        )
+      ),
       routerConfig: AppRouter.createRouter(),
     );
   }

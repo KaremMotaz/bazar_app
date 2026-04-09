@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/auth/presentation/views/widgets/signup_view_body.dart';
+import 'package:bazar_app/features/auth/presentation/widgets/signup_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SignupView extends StatelessWidget {
@@ -7,7 +7,7 @@ class SignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("إنشاء حساب جديد")),
+      appBar: AppBar(),
       body: const SafeArea(child: SignupViewBody()),
     );
   }

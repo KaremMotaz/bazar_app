@@ -2,9 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/routing/routes.dart';
-import '../../../../../core/theming/app_colors.dart';
-import '../../../../../core/theming/app_styles.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
 
 class AlreadyHaveAnAccount extends StatelessWidget {
   const AlreadyHaveAnAccount({super.key});
@@ -15,14 +15,17 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       textAlign: TextAlign.center,
       TextSpan(
         children: [
-          const TextSpan(text: " تمتلك حساباً؟ ", style: AppStyles.medium16),
+          TextSpan(
+            text: "Have an account?",
+            style: AppStyles.medium16.copyWith(color: AppColors.appGray),
+          ),
           const TextSpan(text: " "),
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                GoRouter.of(context).push(Routes.signInView);
+                context.push(Routes.signInView);
               },
-            text: "تسجيل الدخول",
+            text: "Sign In",
             style: AppStyles.medium16.copyWith(color: AppColors.mainColor),
           ),
         ],

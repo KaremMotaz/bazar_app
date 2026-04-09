@@ -1,8 +1,10 @@
+import 'package:bazar_app/core/services/cache_helper.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 // import '../../../../../core/services/cache_helper.dart';
 // import '../../../../../core/helpers/constants.dart';
+import '../../../../../core/helpers/constants.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_assets.dart';
@@ -93,13 +95,14 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           const SizedBox(height: 32),
           AppTextButton(
             textStyle: AppStyles.bold17.copyWith(color: AppColors.white),
+            borderRadius: 12,
             onPressed: () {
               if (currentPageIndex < pages.length - 1) {
                 goToNextPage();
                 return;
               }
-              // CacheHelper.set(key: kHasSeenOnboarding, value: true);
-              GoRouter.of(context).pushReplacement(Routes.signInView);
+              CacheHelper.set(key: kHasSeenOnboarding, value: true);
+              context.pushReplacement(Routes.signInView);
             },
             child: Text(
               currentPageIndex < pages.length - 1 ? "Continue" : "Get Started",
@@ -109,15 +112,17 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
           const SizedBox(height: 8),
           AppTextButton(
             backgroundColor: Color(0xffFAF9FD),
+            borderRadius: 12,
             onPressed: () {
-              // CacheHelper.set(key: kHasSeenOnboarding, value: true);
-              GoRouter.of(context).pushReplacement(Routes.signInView);
+              CacheHelper.set(key: kHasSeenOnboarding, value: true);
+              context.pushReplacement(Routes.signInView);
             },
             child: Text(
               "Sign in",
               style: AppStyles.bold16.copyWith(color: AppColors.mainColor),
             ),
           ),
+          const SizedBox(height: 8),
         ],
       ),
     );

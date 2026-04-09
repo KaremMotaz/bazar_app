@@ -2,6 +2,8 @@ import 'package:bazar_app/features/auth/presentation/views/login_view.dart';
 import 'package:bazar_app/features/auth/presentation/views/otp_verification_view.dart';
 import 'package:bazar_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:bazar_app/features/auth/presentation/views/signup_view.dart';
+import 'package:bazar_app/features/auth/presentation/views/terms_and_data_policy_view.dart';
+import 'package:bazar_app/features/home/views/home_view.dart';
 import 'package:bazar_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:bazar_app/features/splash/splash_view.dart';
 import 'package:go_router/go_router.dart';
@@ -10,6 +12,7 @@ import 'routes.dart';
 abstract class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
+      initialLocation: Routes.otpVerificationView,
       routes: [
         GoRoute(
           path: Routes.splashView,
@@ -36,6 +39,12 @@ abstract class AppRouter {
           },
         ),
         GoRoute(
+          path: Routes.termsAndDataPolicyView,
+          builder: (context, state) {
+            return const TermsAndDataPolicyView();
+          },
+        ),
+        GoRoute(
           path: Routes.forgotPasswordView,
           builder: (context, state) {
             return const ResetPasswordView();
@@ -45,6 +54,12 @@ abstract class AppRouter {
           path: Routes.otpVerificationView,
           builder: (context, state) {
             return const OtpVerificationView();
+          },
+        ),
+        GoRoute(
+          path: Routes.homeView,
+          builder: (context, state) {
+            return const HomeView();
           },
         ),
       ],

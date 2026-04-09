@@ -1,7 +1,7 @@
 import 'package:bazar_app/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/theming/app_assets.dart';
-import '../../../../../core/theming/app_styles.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_styles.dart';
 import 'dont_have_an_account.dart';
 import 'login_form.dart';
 import 'or_divider.dart';
@@ -13,7 +13,7 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
