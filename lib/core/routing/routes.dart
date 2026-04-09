@@ -5,8 +5,9 @@ class Routes {
   static const String signUpView = '/signUpView';
   static const String termsAndDataPolicyView = '/termsAndDataPolicyView';
   static const String forgotPasswordView = '/forgotPasswordView';
-  static const String enterPhoneView = '/enterPhoneView';
+  static const String addPhoneNumberView = '/addPhoneNumberView';
   static const String otpVerificationView = '/otpVerificationView';
+  static const String congratulationView = '/congratulationView';
   static const String mainView = '/mainView';
   static const String homeView = '/homeView';
 }

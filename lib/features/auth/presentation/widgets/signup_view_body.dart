@@ -1,3 +1,4 @@
+import 'package:bazar_app/core/helpers/constants.dart';
 import 'package:bazar_app/core/theming/app_colors.dart';
 import 'package:bazar_app/features/auth/presentation/widgets/terms_and_data_policy_widget.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,10 @@ class SignupViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.symmetric(
+        horizontal: kAppHorizontalPadding,
+        vertical: kAppVerticalPadding,
+      ),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

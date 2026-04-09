@@ -20,7 +20,7 @@ class CustomPinput extends StatelessWidget {
         margin: EdgeInsets.only(right: 6),
         textStyle: AppStyles.bold24,
         decoration: BoxDecoration(
-          color: Colors.grey.shade50,
+          color: Colors.grey.shade100,
           border: Border.all(color: AppColors.mainColor, width: 1),
           borderRadius: BorderRadius.circular(8),
         ),
@@ -42,7 +42,7 @@ class CustomPinput extends StatelessWidget {
         margin: EdgeInsets.only(right: 6),
         textStyle: AppStyles.bold24,
         decoration: BoxDecoration(
-          color: Colors.grey.shade50,
+          color: Colors.grey.shade100,
           borderRadius: BorderRadius.circular(8),
         ),
       ),

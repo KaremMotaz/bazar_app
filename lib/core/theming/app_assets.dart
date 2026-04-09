@@ -5,4 +5,6 @@ class AppAssets {
   static const String onboarding3 = 'assets/images/onboarding3.png';
   static const String googleIcon = 'assets/svgs/google_icon.svg';
   static const String appleIcon = 'assets/svgs/apple_icon.svg';
+  static const String congratulationIcon =
+      'assets/svgs/congratulation_icon.svg';
 }

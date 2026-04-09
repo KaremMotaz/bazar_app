@@ -1,3 +1,4 @@
+import 'package:bazar_app/core/helpers/constants.dart';
 import 'package:bazar_app/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/app_regex.dart';
@@ -24,26 +25,25 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(
+        horizontal: kAppHorizontalPadding,
+        vertical: kAppVerticalPadding,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "يرجى إدخال بريدك الإلكتروني لتلقي رابط إعادة تعيين كلمة السر",
-            style: AppStyles.regular14,
-          ),
-          // Image.asset(AssetsData.forgotPassword),
+          const Text("Reset Password", style: AppStyles.regular14),
           Form(
             key: _formKey,
             child: AppTextFormField(
-              hintText: "البريد الإلكتروني",
+              hintText: "Your email",
               controller: emailController,
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return "يرجى إدخال بريدك الإلكتروني";
+                  return "Please enter your email";
                 }
                 if (!AppRegex.isEmailValid(value)) {
-                  return "يرجى إدخال بريد إلكتروني صالح";
+                  return "Please enter a valid email";
                 }
                 return null;
               },

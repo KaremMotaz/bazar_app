@@ -77,7 +77,7 @@ class _OnboardingViewBodyState extends State<OnboardingViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
       child: Column(
         children: [
           OnboardingPageView(pageController: _pageController, pages: pages),

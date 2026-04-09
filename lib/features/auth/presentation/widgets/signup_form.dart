@@ -1,3 +1,4 @@
+import 'package:bazar_app/core/enums/verification_type.dart';
 import 'package:bazar_app/core/routing/routes.dart';
 import 'package:bazar_app/core/widgets/app_text_button.dart';
 import 'package:bazar_app/features/auth/presentation/widgets/email_form_widget.dart';
@@ -91,7 +92,7 @@ class _SignUpFormState extends State<SignUpForm> {
   void validateThenSignup(BuildContext context) {
     context.pushReplacement(
       Routes.otpVerificationView,
-      extra: emailController.text,
+      extra: {"type": VerificationType.email, "value": emailController.text},
     );
     // if (formKey.currentState!.validate()) {}
   }

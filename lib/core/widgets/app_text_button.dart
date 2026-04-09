@@ -54,7 +54,7 @@ class AppTextButton extends StatelessWidget {
       child:
           child ??
           Text(
-            buttonText ?? "التالي",
+            buttonText ?? "Continue",
             style:
                 textStyle ??
                 AppStyles.semiBold15.copyWith(color: AppColors.white),

@@ -1,3 +1,4 @@
+import 'package:bazar_app/core/enums/verification_type.dart';
 import 'package:bazar_app/core/routing/routes.dart';
 import 'package:bazar_app/core/theming/app_colors.dart';
 import 'package:bazar_app/core/theming/app_styles.dart';
@@ -8,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class PinInputForm extends StatefulWidget {
-  const PinInputForm({super.key});
+  final VerificationType type;
+
+  const PinInputForm({super.key, required this.type});
 
   @override
   State<PinInputForm> createState() => _PinInputFormState();
@@ -34,10 +37,16 @@ class _PinInputFormState extends State<PinInputForm> {
           ResendOtpWidget(),
           const SizedBox(height: 43),
           AppTextButton(
-            buttonText: "Continue",
             textStyle: AppStyles.semiBold16.copyWith(color: AppColors.white),
             onPressed: () {
-              context.push(Routes.signInView);
+              switch (widget.type) {
+                case VerificationType.email:
+                  context.push(Routes.addPhoneNumberView);
+                  break;
+                case VerificationType.phone:
+                  context.pushReplacement(Routes.congratulationView);
+                  break;
+              }
             },
           ),
         ],
