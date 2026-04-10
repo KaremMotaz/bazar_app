@@ -1,7 +1,8 @@
-import 'package:bazar_app/core/helpers/app_regex.dart';
-import 'package:bazar_app/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_form_field.dart';
 
 class EmailFormWidget extends StatelessWidget {
   const EmailFormWidget({super.key, required this.emailController});

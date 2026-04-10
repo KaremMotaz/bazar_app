@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
+import '../../../home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class TermsAndDataPolicyView extends StatelessWidget {

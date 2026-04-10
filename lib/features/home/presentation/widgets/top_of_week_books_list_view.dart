@@ -1,7 +1,7 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/data/mock/books_mock.dart';
-import 'package:bazar_app/features/home/data/models/book_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_card.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../data/mock/books_mock.dart';
+import '../../data/models/book_model.dart';
+import 'book_card.dart';
 import 'package:flutter/material.dart';
 
 class TopOfWeekBooksListView extends StatelessWidget {

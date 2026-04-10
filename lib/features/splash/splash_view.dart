@@ -1,6 +1,6 @@
-import 'package:bazar_app/core/routing/routes.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_assets.dart';
+import '../../core/routing/routes.dart';
+import '../../core/theming/app_colors.dart';
+import '../../core/theming/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';

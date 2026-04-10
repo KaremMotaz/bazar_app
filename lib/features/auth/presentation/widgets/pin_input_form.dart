@@ -1,12 +1,13 @@
-import 'package:bazar_app/core/enums/verification_type.dart';
-import 'package:bazar_app/core/routing/routes.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/core/widgets/app_text_button.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/custom_pinput.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/resend_otp_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/enums/verification_type.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
+import 'custom_pinput.dart';
+import 'resend_otp_widget.dart';
 
 class PinInputForm extends StatefulWidget {
   final VerificationType type;

@@ -1,4 +1,5 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
+import '../helpers/constants.dart';
+import '../theming/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -9,7 +10,7 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 24),
+      padding: const EdgeInsets.only(left: kAppHorizontalPadding),
       child: InkWell(
         customBorder: const CircleBorder(),
         onTap: () {

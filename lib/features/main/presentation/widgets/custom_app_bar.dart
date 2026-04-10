@@ -1,5 +1,5 @@
-import 'package:bazar_app/features/home/presentation/widgets/custom_notification_widget.dart';
-import 'package:bazar_app/features/home/presentation/widgets/custom_search_widget.dart';
+import '../../../home/presentation/widgets/custom_notification_widget.dart';
+import '../../../home/presentation/widgets/custom_search_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

@@ -1,7 +1,7 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/reset_password_form.dart';
-import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../widgets/reset_password_form.dart';
+import '../../../home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class ResetPasswordView extends StatelessWidget {

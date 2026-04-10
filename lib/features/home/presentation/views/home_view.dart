@@ -1,8 +1,8 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/best_vendors_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/special_offers_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/top_of_week_section.dart';
+import '../../../../core/helpers/constants.dart';
+import '../widgets/authors_section.dart';
+import '../widgets/best_vendors_section.dart';
+import '../widgets/special_offers_section.dart';
+import '../widgets/top_of_week_section.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

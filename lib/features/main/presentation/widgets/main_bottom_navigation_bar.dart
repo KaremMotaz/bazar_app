@@ -1,8 +1,8 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/main/presentation/manager/main_cubit/main_cubit.dart';
-import 'package:bazar_app/features/main/presentation/widgets/nav_item.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../manager/main_cubit/main_cubit.dart';
+import 'nav_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

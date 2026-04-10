@@ -1,6 +1,6 @@
-import 'package:bazar_app/core/routing/routes.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors_list_view.dart';
-import 'package:bazar_app/features/home/presentation/widgets/custom_section_header.dart';
+import '../../../../core/routing/routes.dart';
+import 'authors_list_view.dart';
+import 'custom_section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

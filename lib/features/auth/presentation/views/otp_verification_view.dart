@@ -1,9 +1,9 @@
-import 'package:bazar_app/core/enums/verification_type.dart';
-import 'package:bazar_app/core/extensions/string_extensions.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/pin_input_form.dart';
-import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
+import '../../../../core/enums/verification_type.dart';
+import '../../../../core/extensions/string_extensions.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../widgets/pin_input_form.dart';
+import '../../../home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/constants.dart';
 

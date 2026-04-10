@@ -1,5 +1,5 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../models/vendor_model.dart';
 
 class VendorsMock {
   static const List<VendorModel> vendors = [

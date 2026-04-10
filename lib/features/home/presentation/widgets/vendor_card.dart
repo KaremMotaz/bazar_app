@@ -1,5 +1,6 @@
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../data/models/vendor_model.dart';
 
 class VendorCard extends StatelessWidget {
   final VendorModel vendor;

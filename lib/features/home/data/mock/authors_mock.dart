@@ -1,5 +1,5 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
-import 'package:bazar_app/features/home/data/models/authors_model.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../models/authors_model.dart';
 
 class AuthorsMock {
   static const List<AuthorModel> authors = [

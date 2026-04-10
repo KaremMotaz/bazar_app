@@ -1,6 +1,7 @@
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/theming/app_styles.dart';
+import '../../data/models/book_model.dart';
 
 class BookCard extends StatelessWidget {
   final BookModel book;

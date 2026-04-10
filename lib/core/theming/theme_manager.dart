@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'app_colors.dart';
 import 'app_styles.dart';
-import 'package:flutter/material.dart';
 
 abstract class ThemeManager {
   static ThemeData getAppTheme() {

@@ -1,7 +1,7 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/data/mock/vendors_mock.dart';
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendor_card.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../data/mock/vendors_mock.dart';
+import '../../data/models/vendor_model.dart';
+import 'vendor_card.dart';
 import 'package:flutter/material.dart';
 
 class BestVendorsListView extends StatelessWidget {

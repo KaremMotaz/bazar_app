@@ -1,10 +1,10 @@
-import 'package:bazar_app/features/auth/presentation/widgets/dont_have_an_account.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/login_form.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/or_divider.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/social_login_button.dart';
+import '../widgets/dont_have_an_account.dart';
+import '../widgets/login_form.dart';
+import '../widgets/or_divider.dart';
+import '../widgets/social_login_button.dart';
 import 'package:flutter/material.dart';
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 

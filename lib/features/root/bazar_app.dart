@@ -1,5 +1,5 @@
-import 'package:bazar_app/core/routing/app_router.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
+import '../../core/routing/app_router.dart';
+import '../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class BazarApp extends StatelessWidget {

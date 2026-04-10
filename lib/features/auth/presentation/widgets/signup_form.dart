@@ -1,9 +1,9 @@
-import 'package:bazar_app/core/enums/verification_type.dart';
-import 'package:bazar_app/core/routing/routes.dart';
-import 'package:bazar_app/core/widgets/app_text_button.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/email_form_widget.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/name_form_widget.dart';
-import 'package:bazar_app/features/auth/presentation/widgets/password_form_widget.dart';
+import '../../../../core/enums/verification_type.dart';
+import '../../../../core/routing/routes.dart';
+import '../../../../core/widgets/app_text_button.dart';
+import 'email_form_widget.dart';
+import 'name_form_widget.dart';
+import 'password_form_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/helpers/app_regex.dart';

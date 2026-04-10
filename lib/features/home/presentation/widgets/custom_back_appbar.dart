@@ -1,10 +1,11 @@
-import 'package:bazar_app/core/widgets/custom_back_button.dart';
+import '../../../../core/widgets/custom_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomBackAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  const CustomBackAppbar({super.key, this.title});
+  final Widget? actionWidget;
+  const CustomBackAppbar({super.key, this.title, this.actionWidget});
 
   @override
   Size get preferredSize => const Size.fromHeight(56);
@@ -16,6 +17,7 @@ class CustomBackAppbar extends StatelessWidget implements PreferredSizeWidget {
       leading: context.canPop() ? CustomBackButton() : null,
       leadingWidth: 50,
       title: Text(title ?? ""),
+      actions: [actionWidget ?? const SizedBox.shrink()],
     );
   }
 }

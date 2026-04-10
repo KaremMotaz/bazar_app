@@ -1,5 +1,5 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
-import 'package:bazar_app/features/home/data/models/book_model.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../models/book_model.dart';
 
 class BooksMock {
   static const List<BookModel> books = [

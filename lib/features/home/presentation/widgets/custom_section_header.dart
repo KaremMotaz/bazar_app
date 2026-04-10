@@ -1,6 +1,6 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomSectionHeader extends StatelessWidget {

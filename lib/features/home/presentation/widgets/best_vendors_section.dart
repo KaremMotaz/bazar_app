@@ -1,5 +1,5 @@
-import 'package:bazar_app/features/home/presentation/widgets/best_vendors_list_view.dart';
-import 'package:bazar_app/features/home/presentation/widgets/custom_section_header.dart';
+import 'best_vendors_list_view.dart';
+import 'custom_section_header.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
