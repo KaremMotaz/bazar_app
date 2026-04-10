@@ -20,34 +20,36 @@ class SpecialOfferCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: kAppHorizontalPadding,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Special Offer", style: AppStyles.bold20),
-                Text(
-                  "Discount 25%",
-                  style: AppStyles.regular14.copyWith(
-                    color: AppColors.lightBlack,
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Special Offer", style: AppStyles.bold20),
+              Text(
+                "Discount 25%",
+                style: AppStyles.regular14.copyWith(
+                  color: AppColors.lightBlack,
                 ),
-                SizedBox(height: 14),
-                AppTextButton(
-                  onPressed: () {},
-                  buttonText: "Order Now",
-                  withSize: false,
-                  horizontalPadding: 24,
-                  verticalPadding: 8,
-                  borderRadius: 40,
-                ),
-              ],
+              ),
+              SizedBox(height: 14),
+              AppTextButton(
+                onPressed: () {},
+                buttonText: "Order Now",
+                withSize: false,
+                horizontalPadding: 24,
+                verticalPadding: 8,
+                borderRadius: 40,
+              ),
+            ],
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(3.5),
+            child: Image.asset(
+              AppAssets.specialOffer1,
+              fit: BoxFit.fitHeight,
+              width: 99,
             ),
           ),
-          Image.asset(AppAssets.specialOffer1, fit: BoxFit.cover, width: 146),
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:bazar_app/core/helpers/constants.dart';
 import 'package:bazar_app/core/theming/app_colors.dart';
 import 'package:bazar_app/core/theming/app_styles.dart';
 import 'package:bazar_app/features/auth/presentation/widgets/add_phone_form.dart';
+import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class AddPhoneNumberView extends StatelessWidget {
@@ -10,7 +11,7 @@ class AddPhoneNumberView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: CustomBackAppbar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(

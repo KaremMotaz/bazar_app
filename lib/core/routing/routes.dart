@@ -11,4 +11,7 @@ class Routes {
   static const String mainView = '/mainView';
   static const String searchView = '/searchView';
   static const String notificationView = '/notificationView';
+  static const String vendordsView = '/vendordsView';
+  static const String authorsView = '/authorsView';
+  static const String authorDetailsView = '/authorDetailsView';
 }

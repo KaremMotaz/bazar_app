@@ -1,3 +1,4 @@
+import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {
@@ -5,6 +6,6 @@ class NotificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("Notification")));
+    return Scaffold(appBar: CustomBackAppbar(title: "Notification"));
   }
 }

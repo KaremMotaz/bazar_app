@@ -1,3 +1,4 @@
+import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -5,6 +6,6 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("Search")));
+    return Scaffold(appBar: CustomBackAppbar(title: "Search"));
   }
 }

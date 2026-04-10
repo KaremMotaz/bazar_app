@@ -6,8 +6,11 @@ import 'package:bazar_app/features/auth/presentation/views/otp_verification_view
 import 'package:bazar_app/features/auth/presentation/views/reset_password_view.dart';
 import 'package:bazar_app/features/auth/presentation/views/signup_view.dart';
 import 'package:bazar_app/features/auth/presentation/views/terms_and_data_policy_view.dart';
+import 'package:bazar_app/features/home/presentation/views/author_details_view.dart';
+import 'package:bazar_app/features/home/presentation/views/authors_view.dart';
 import 'package:bazar_app/features/home/presentation/views/notification_view.dart';
 import 'package:bazar_app/features/home/presentation/views/search_view.dart';
+import 'package:bazar_app/features/home/presentation/views/vendords_view.dart';
 import 'package:bazar_app/features/main/presentation/main_view.dart';
 import 'package:bazar_app/features/main/presentation/manager/main_cubit/main_cubit.dart';
 import 'package:bazar_app/features/onboarding/presentation/views/onboarding_view.dart';
@@ -97,6 +100,24 @@ abstract class AppRouter {
           path: Routes.notificationView,
           builder: (context, state) {
             return const NotificationView();
+          },
+        ),
+        GoRoute(
+          path: Routes.vendordsView,
+          builder: (context, state) {
+            return const VendordsView();
+          },
+        ),
+        GoRoute(
+          path: Routes.authorsView,
+          builder: (context, state) {
+            return const AuthorsView();
+          },
+        ),
+        GoRoute(
+          path: Routes.authorDetailsView,
+          builder: (context, state) {
+            return const AuthorDetailsView();
           },
         ),
       ],

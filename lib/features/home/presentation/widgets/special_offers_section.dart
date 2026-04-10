@@ -23,7 +23,7 @@ class _SpecialOffersSectionState extends State<SpecialOffersSection> {
           CarouselSlider(
             items: List.generate(3, (index) => SpecialOfferCard()),
             options: CarouselOptions(
-              height: 170,
+              height: 145,
               // autoPlay: true,
               viewportFraction: 1,
               onPageChanged: (index, reason) {

@@ -1,6 +1,7 @@
 import 'package:bazar_app/core/helpers/constants.dart';
 import 'package:bazar_app/core/theming/app_styles.dart';
 import 'package:bazar_app/features/auth/presentation/widgets/reset_password_form.dart';
+import 'package:bazar_app/features/home/presentation/widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class ResetPasswordView extends StatelessWidget {
@@ -9,7 +10,7 @@ class ResetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: CustomBackAppbar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(

@@ -31,6 +31,7 @@ abstract class AppStyles {
   static const TextStyle bold20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeightHelper.bold,
+    color: Colors.black,
   );
   static const TextStyle medium20 = TextStyle(
     fontSize: 20,
