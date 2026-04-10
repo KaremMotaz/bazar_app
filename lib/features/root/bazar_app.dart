@@ -11,8 +11,9 @@ class BazarApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white
-        )
+          backgroundColor: Colors.white,
+          centerTitle: true,
+        ),
       ),
       routerConfig: AppRouter.createRouter(),
     );

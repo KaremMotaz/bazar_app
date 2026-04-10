@@ -90,10 +90,11 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   void validateThenSignup(BuildContext context) {
-    context.pushReplacement(
-      Routes.otpVerificationView,
-      extra: {"type": VerificationType.email, "value": emailController.text},
-    );
-    // if (formKey.currentState!.validate()) {}
+    if (formKey.currentState!.validate()) {
+      context.pushReplacement(
+        Routes.otpVerificationView,
+        extra: {"type": VerificationType.email, "value": emailController.text},
+      );
+    }
   }
 }

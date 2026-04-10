@@ -16,6 +16,7 @@ class AppTextButton extends StatelessWidget {
     this.buttonWidth,
     this.buttonHeight,
     this.child,
+    this.withSize = true,
   });
   final String? buttonText;
   final TextStyle? textStyle;
@@ -27,7 +28,7 @@ class AppTextButton extends StatelessWidget {
   final double? buttonWidth;
   final double? buttonHeight;
   final Widget? child;
-
+  final bool withSize;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -47,17 +48,18 @@ class AppTextButton extends StatelessWidget {
             vertical: verticalPadding ?? 14,
           ),
         ),
-        fixedSize: WidgetStatePropertyAll(
-          Size(buttonWidth ?? double.maxFinite, buttonHeight ?? 55),
-        ),
+        fixedSize: withSize
+            ? WidgetStatePropertyAll(
+                Size(buttonWidth ?? double.maxFinite, buttonHeight ?? 55),
+              )
+            : null,
       ),
       child:
           child ??
           Text(
             buttonText ?? "Continue",
             style:
-                textStyle ??
-                AppStyles.semiBold15.copyWith(color: AppColors.white),
+                textStyle ?? AppStyles.bold14.copyWith(color: AppColors.white),
           ),
     );
   }

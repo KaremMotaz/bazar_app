@@ -1,21 +1,19 @@
-import 'package:bazar_app/core/helpers/constants.dart';
 import 'package:bazar_app/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/app_regex.dart';
-import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
 
-class ResetPasswordViewBody extends StatefulWidget {
-  const ResetPasswordViewBody({super.key});
+class ResetPasswordForm extends StatefulWidget {
+  const ResetPasswordForm({super.key});
 
   @override
-  State<ResetPasswordViewBody> createState() => _ResetPasswordViewBodyState();
+  State<ResetPasswordForm> createState() => _ResetPasswordFormState();
 }
 
 final TextEditingController emailController = TextEditingController();
 final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
+class _ResetPasswordFormState extends State<ResetPasswordForm> {
   @override
   void dispose() {
     emailController.dispose();
@@ -24,18 +22,12 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: kAppHorizontalPadding,
-        vertical: kAppVerticalPadding,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text("Reset Password", style: AppStyles.regular14),
-          Form(
-            key: _formKey,
-            child: AppTextFormField(
+    return Form(
+      key: _formKey,
+      child: Expanded(
+        child: Column(
+          children: [
+            AppTextFormField(
               hintText: "Your email",
               controller: emailController,
               validator: (value) {
@@ -48,11 +40,10 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
                 return null;
               },
             ),
-          ),
-          const Spacer(),
-          AppTextButton(onPressed: () {}, buttonText: "Reset Password"),
-          const SizedBox(height: 24),
-        ],
+            const Spacer(),
+            AppTextButton(onPressed: () {}, buttonText: "Reset Password"),
+          ],
+        ),
       ),
     );
   }

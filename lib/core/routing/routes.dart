@@ -10,4 +10,6 @@ class Routes {
   static const String congratulationView = '/congratulationView';
   static const String mainView = '/mainView';
   static const String homeView = '/homeView';
+  static const String searchView = '/searchView';
+  static const String notificationView = '/notificationView';
 }
