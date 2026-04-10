@@ -54,7 +54,7 @@ class _SignInFormState extends State<SignInForm> {
     await CacheHelper.set(key: "email", value: emailController.text);
     await CacheHelper.set(key: "password", value: passwordController.text);
     // ignore: use_build_context_synchronously
-    context.pushReplacement(Routes.homeView);
+    context.pushReplacement(Routes.mainView);
 
     // if (formKey.currentState!.validate()) {}
   }

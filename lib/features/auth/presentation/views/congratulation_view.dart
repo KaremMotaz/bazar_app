@@ -35,7 +35,7 @@ class CongratulationView extends StatelessWidget {
               AppTextButton(
                 buttonText: "Get Started",
                 onPressed: () {
-                  context.go(Routes.homeView);
+                  context.go(Routes.mainView);
                 },
               ),
             ],

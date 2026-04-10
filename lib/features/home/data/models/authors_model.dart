@@ -1,0 +1,15 @@
+class AuthorModel {
+  final String id;
+  final String name;
+  final String image;
+  final String spesiality;
+  final String about;
+
+  const AuthorModel({
+    required this.name,
+    required this.image,
+    required this.id,
+    required this.spesiality,
+    required this.about,
+  });
+}
