@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/routing/routes.dart';
+import '../../../../../core/routing/routes.dart';
 import 'best_vendors_list_view.dart';
-import 'custom_section_header.dart';
+import '../shared/custom_section_header.dart';
 
 class BestVendorsSection extends StatelessWidget {
   const BestVendorsSection({super.key});

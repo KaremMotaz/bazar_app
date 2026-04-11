@@ -30,5 +30,37 @@ class AuthorsMock {
           "Perston was born and raised in south bend,indiana she went to college at the university of michigan.",
       rating: 4,
     ),
+    AuthorModel(
+      name: "Hernan Diaz",
+      image: AppAssets.author4,
+      id: "4",
+      spesiality: "Novelist",
+      about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      rating: 4,
+    ),
+    AuthorModel(
+      name: "Ann Napolitano",
+      image: AppAssets.author5,
+      id: "5",
+      spesiality: "Writer",
+      about: "She is the author of the novels A Good Hard",
+      rating: 5,
+    ),
+    AuthorModel(
+      name: "Abraham verghese",
+      image: AppAssets.author6,
+      id: "6",
+      spesiality: "Novelist",
+      about: "He is the professor and Linda R . Meier and her husband",
+      rating: 3,
+    ),
+    AuthorModel(
+      name: "Adam Dalva",
+      image: AppAssets.author7,
+      id: "7",
+      spesiality: "Writer",
+      about: "He is the senior fiction editor of guernica magazine",
+      rating: 4,
+    ),
   ];
 }

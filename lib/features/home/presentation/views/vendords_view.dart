@@ -1,16 +1,21 @@
+import 'package:bazar_app/features/home/data/mock/vendors_mock.dart';
+import 'package:bazar_app/features/home/data/models/vendor_model.dart';
+import 'package:bazar_app/features/home/presentation/widgets/vendords/vendords_grid_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../widgets/custom_back_appbar.dart';
-import '../widgets/custom_search_widget.dart';
+import '../widgets/shared/custom_back_appbar.dart';
+import '../widgets/shared/custom_search_widget.dart';
 
 class VendordsView extends StatelessWidget {
   const VendordsView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<VendorModel> vendors = VendorsMock.vendors;
+
     return Scaffold(
       appBar: CustomBackAppbar(
         title: "Vendors",
@@ -34,6 +39,7 @@ class VendordsView extends StatelessWidget {
               style: AppStyles.bold20.copyWith(color: AppColors.mainColor),
             ),
             const SizedBox(height: 30),
+            VendordsGridView(vendors: vendors),
           ],
         ),
       ),

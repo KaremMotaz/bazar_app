@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../../../home/presentation/widgets/custom_back_appbar.dart';
+import '../../../home/presentation/widgets/shared/custom_back_appbar.dart';
 import '../widgets/already_have_an_account.dart';
 import '../widgets/signup_form.dart';
 import '../widgets/terms_and_data_policy_widget.dart';

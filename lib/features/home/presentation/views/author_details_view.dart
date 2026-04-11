@@ -1,9 +1,9 @@
 import '../../data/models/authors_model.dart';
-import '../widgets/about_author.dart';
-import '../widgets/author_info.dart';
-import '../widgets/author_products.dart';
+import '../widgets/authors/about_author.dart';
+import '../widgets/authors/author_info.dart';
+import '../widgets/authors/author_products.dart';
 import '../../../../core/helpers/constants.dart';
-import '../widgets/custom_back_appbar.dart';
+import '../widgets/shared/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class AuthorDetailsView extends StatelessWidget {

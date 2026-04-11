@@ -1,28 +1,30 @@
-import '../../../../core/helpers/constants.dart';
-import '../../data/mock/authors_mock.dart';
-import '../../data/models/authors_model.dart';
+import '../../../../../core/helpers/constants.dart';
+import '../../../data/models/authors_model.dart';
 import 'author_card.dart';
 import 'package:flutter/material.dart';
 
-class AuthorsListView extends StatelessWidget {
-  const AuthorsListView({super.key});
+class AuthorsHorizontalListView extends StatelessWidget {
+  final List<AuthorModel> authors;
+  const AuthorsHorizontalListView({super.key, required this.authors});
 
   @override
   Widget build(BuildContext context) {
-    const List<AuthorModel> authors = AuthorsMock.authors;
+    final List<AuthorModel> limitedauthors = authors.take(3).toList();
     return SizedBox(
       height: 160,
       child: ListView.separated(
-        itemCount: authors.length,
+        itemCount: limitedauthors.length,
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(
               left: index == 0 ? kAppHorizontalPadding : 0,
-              right: index == authors.length - 1 ? kAppHorizontalPadding : 0,
+              right: index == limitedauthors.length - 1
+                  ? kAppHorizontalPadding
+                  : 0,
             ),
-            child: AuthorCard(author: authors[index]),
+            child: AuthorCard(author: limitedauthors[index]),
           );
         },
         separatorBuilder: (context, index) {

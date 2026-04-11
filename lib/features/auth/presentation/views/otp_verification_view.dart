@@ -5,7 +5,7 @@ import '../../../../core/extensions/string_extensions.dart';
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../../../home/presentation/widgets/custom_back_appbar.dart';
+import '../../../home/presentation/widgets/shared/custom_back_appbar.dart';
 import '../widgets/pin_input_form.dart';
 
 class OtpVerificationView extends StatelessWidget {

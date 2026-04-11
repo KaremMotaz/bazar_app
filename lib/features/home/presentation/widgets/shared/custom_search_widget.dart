@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_assets.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/theming/app_assets.dart';
 
 class CustomSearchWidget extends StatelessWidget {
   const CustomSearchWidget({super.key});

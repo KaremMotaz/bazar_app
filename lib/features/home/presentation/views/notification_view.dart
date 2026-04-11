@@ -1,4 +1,4 @@
-import '../widgets/custom_back_appbar.dart';
+import '../widgets/shared/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {

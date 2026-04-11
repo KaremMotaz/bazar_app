@@ -1,6 +1,6 @@
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../data/models/authors_model.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../data/models/authors_model.dart';
 import 'author_rating.dart';
 import 'package:flutter/material.dart';
 

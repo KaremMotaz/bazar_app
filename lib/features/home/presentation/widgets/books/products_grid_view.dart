@@ -1,25 +1,23 @@
+import 'package:bazar_app/features/home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
-
-import '../../data/mock/books_mock.dart';
 import 'product_card.dart';
 
 class ProductsGridView extends StatelessWidget {
-  const ProductsGridView({super.key});
+  final List<BookModel> books;
+  const ProductsGridView({super.key, required this.books});
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
-        childAspectRatio: 0.65,
+        childAspectRatio: 0.74,
       ),
-      itemCount: 4,
+      itemCount: books.length,
       itemBuilder: (context, index) {
-        return ProductCard(book: BooksMock.books[index]);
+        return ProductCard(book: books[index]);
       },
     );
   }

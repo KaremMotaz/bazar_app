@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../home/presentation/widgets/custom_notification_widget.dart';
-import '../../../home/presentation/widgets/custom_search_widget.dart';
+import '../../../home/presentation/widgets/shared/custom_notification_widget.dart';
+import '../../../home/presentation/widgets/shared/custom_search_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/theming/app_assets.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/app_text_button.dart';
+import '../../../../../core/helpers/constants.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../../../core/widgets/app_text_button.dart';
 
 class SpecialOfferCard extends StatelessWidget {
   const SpecialOfferCard({super.key});

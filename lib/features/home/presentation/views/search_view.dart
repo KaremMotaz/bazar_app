@@ -5,7 +5,7 @@ import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../widgets/custom_back_appbar.dart';
+import '../widgets/shared/custom_back_appbar.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});

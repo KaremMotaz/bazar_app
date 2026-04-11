@@ -1,8 +1,8 @@
 import 'book_details_content.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/theming/app_styles.dart';
-import '../../data/models/book_model.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../data/models/book_model.dart';
 
 class BookCard extends StatelessWidget {
   final BookModel book;
@@ -27,7 +27,11 @@ class BookCard extends StatelessWidget {
             child: Image.asset(book.image, height: 150, width: 127),
           ),
           const SizedBox(height: 10),
-          Text(book.title, style: AppStyles.medium14),
+          Text(
+            book.title,
+            style: AppStyles.medium14,
+            overflow: TextOverflow.ellipsis,
+          ),
           Text("\$${book.price}", style: AppStyles.bold12),
         ],
       ),
