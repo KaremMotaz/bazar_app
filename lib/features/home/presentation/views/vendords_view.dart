@@ -1,11 +1,11 @@
 import 'package:bazar_app/features/home/data/mock/vendors_mock.dart';
 import 'package:bazar_app/features/home/data/models/vendor_model.dart';
+import 'package:bazar_app/features/home/presentation/manager/vendors_cubit/vendors_cubit.dart';
 import 'package:bazar_app/features/home/presentation/widgets/vendords/vendords_grid_view.dart';
+import 'package:bazar_app/features/home/presentation/widgets/vendords/vendords_header.dart';
+import 'package:bazar_app/features/home/presentation/widgets/vendords/vendors_tabs.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/shared/custom_back_appbar.dart';
 import '../widgets/shared/custom_search_widget.dart';
 
@@ -15,7 +15,6 @@ class VendordsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<VendorModel> vendors = VendorsMock.vendors;
-
     return Scaffold(
       appBar: CustomBackAppbar(
         title: "Vendors",
@@ -24,25 +23,21 @@ class VendordsView extends StatelessWidget {
           child: CustomSearchWidget(),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Our Vendors",
-              style: AppStyles.regular16.copyWith(color: Colors.grey.shade500),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "Vendors",
-              style: AppStyles.bold20.copyWith(color: AppColors.mainColor),
-            ),
-            const SizedBox(height: 30),
-            // Here
-            VendordsGridView(vendors: vendors),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          VendordsHeader(),
+          const SizedBox(height: 40),
+          const VendorsTabs(),
+          const SizedBox(height: 28),
+          BlocBuilder<VendorsCubit, VendorsState>(
+            builder: (context, state) {
+              final cubit = context.read<VendorsCubit>();
+              final filtered = cubit.getFilteredVendors(vendors);
+              return VendordsGridView(vendors: filtered);
+            },
+          ),
+        ],
       ),
     );
   }

@@ -5,6 +5,7 @@ class AuthorsMock {
   static const List<AuthorModel> authors = [
     AuthorModel(
       name: "John Freeman",
+      type: "poet",
       image: AppAssets.author1,
       id: "1",
       spesiality: "Writer",
@@ -14,6 +15,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Tess Gunty",
+      type: "playwright",
       image: AppAssets.author2,
       id: "2",
       spesiality: "Novelist",
@@ -23,6 +25,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Richard Perston",
+      type: "novelist",
       image: AppAssets.author3,
       id: "3",
       spesiality: "Writer",
@@ -32,6 +35,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Hernan Diaz",
+      type: "journalist",
       image: AppAssets.author4,
       id: "4",
       spesiality: "Novelist",
@@ -40,6 +44,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Ann Napolitano",
+      type: "poet",
       image: AppAssets.author5,
       id: "5",
       spesiality: "Writer",
@@ -48,6 +53,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Abraham verghese",
+      type: "playwright",
       image: AppAssets.author6,
       id: "6",
       spesiality: "Novelist",
@@ -56,6 +62,7 @@ class AuthorsMock {
     ),
     AuthorModel(
       name: "Adam Dalva",
+      type: "novelist",
       image: AppAssets.author7,
       id: "7",
       spesiality: "Writer",

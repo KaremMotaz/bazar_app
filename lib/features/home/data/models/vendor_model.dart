@@ -1,11 +1,15 @@
 class VendorModel {
+  final String id;
   final String name;
   final String image;
   final double rating;
+  final String category;
 
   const VendorModel({
+    required this.id,
     required this.name,
     required this.image,
     required this.rating,
+    required this.category,
   });
 }

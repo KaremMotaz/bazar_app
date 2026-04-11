@@ -9,6 +9,7 @@ class BooksMock {
       image: AppAssets.book1,
       vendors: ["GooDay"],
       price: "14.99",
+      category: "novel",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -19,6 +20,7 @@ class BooksMock {
       image: AppAssets.book2,
       vendors: ["GooDay"],
       price: "57.99",
+      category: "self_love",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -29,6 +31,7 @@ class BooksMock {
       image: AppAssets.book3,
       vendors: ["GooDay"],
       price: "25.99",
+      category: "science",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -39,6 +42,7 @@ class BooksMock {
       image: AppAssets.book4,
       vendors: ["GooDay"],
       price: "30.99",
+      category: "romantic",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -48,6 +52,7 @@ class BooksMock {
       title: "Carrie Fisher",
       image: AppAssets.book5,
       price: "75.99",
+      category: "novel",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -58,6 +63,7 @@ class BooksMock {
       title: "The Da vinci Code",
       image: AppAssets.book6,
       price: "37.99",
+      category: "self_love",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 3,
@@ -68,6 +74,7 @@ class BooksMock {
       title: "The Waiting",
       image: AppAssets.book7,
       price: "28.99",
+      category: "science",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -78,6 +85,7 @@ class BooksMock {
       title: "The Good Sister",
       image: AppAssets.book8,
       price: "83.99",
+      category: "romantic",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 5,
@@ -88,6 +96,7 @@ class BooksMock {
       title: "Bright Young Women",
       image: AppAssets.book9,
       price: "68.99",
+      category: "novel",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 4,
@@ -98,6 +107,7 @@ class BooksMock {
       title: "Where Are You",
       image: AppAssets.book10,
       price: "48.99",
+      category: "self_love",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
       rating: 3,

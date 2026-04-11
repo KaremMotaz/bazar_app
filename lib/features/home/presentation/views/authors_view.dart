@@ -1,11 +1,11 @@
 import 'package:bazar_app/features/home/data/mock/authors_mock.dart';
 import 'package:bazar_app/features/home/data/models/authors_model.dart';
+import 'package:bazar_app/features/home/presentation/manager/authors_cubit/authors_cubit.dart';
+import 'package:bazar_app/features/home/presentation/widgets/authors/authors_header.dart';
+import 'package:bazar_app/features/home/presentation/widgets/authors/authors_tabs.dart';
 import 'package:bazar_app/features/home/presentation/widgets/authors/authors_vertical_list_view.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/shared/custom_back_appbar.dart';
 import '../widgets/shared/custom_search_widget.dart';
 
@@ -24,24 +24,21 @@ class AuthorsView extends StatelessWidget {
           child: CustomSearchWidget(),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Check the authors",
-              style: AppStyles.regular16.copyWith(color: Colors.grey.shade500),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "Authors",
-              style: AppStyles.bold20.copyWith(color: AppColors.mainColor),
-            ),
-            const SizedBox(height: 30),
-            AuthorsVerticalListView(authors: authors),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AuthorsHeader(),
+          const SizedBox(height: 40),
+          const AuthorsTabs(),
+          const SizedBox(height: 28),
+          BlocBuilder<AuthorsCubit, AuthorsState>(
+            builder: (context, state) {
+              final cubit = context.read<AuthorsCubit>();
+              final filtered = cubit.getFilteredAuthors(authors);
+              return AuthorsVerticalListView(authors: filtered);
+            },
+          ),
+        ],
       ),
     );
   }

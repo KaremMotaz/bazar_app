@@ -1,3 +1,6 @@
+import 'package:bazar_app/features/home/presentation/manager/authors_cubit/authors_cubit.dart';
+import 'package:bazar_app/features/home/presentation/manager/vendors_cubit/vendors_cubit.dart';
+
 import '../../features/home/data/models/authors_model.dart';
 
 import '../enums/verification_type.dart';
@@ -107,13 +110,19 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.vendordsView,
           builder: (context, state) {
-            return const VendordsView();
+            return BlocProvider(
+              create: (context) => VendorsCubit(),
+              child: const VendordsView(),
+            );
           },
         ),
         GoRoute(
           path: Routes.authorsView,
           builder: (context, state) {
-            return const AuthorsView();
+            return BlocProvider(
+              create: (context) => AuthorsCubit(),
+              child: const AuthorsView(),
+            );
           },
         ),
         GoRoute(

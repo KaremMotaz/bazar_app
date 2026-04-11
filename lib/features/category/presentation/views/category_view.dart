@@ -1,8 +1,11 @@
 import 'package:bazar_app/core/helpers/constants.dart';
+import 'package:bazar_app/features/category/presentation/widgets/books_tabs.dart';
 import 'package:bazar_app/features/home/data/mock/books_mock.dart';
 import 'package:bazar_app/features/home/data/models/book_model.dart';
+import 'package:bazar_app/features/home/presentation/manager/books_cubit/books_cubit.dart';
 import 'package:bazar_app/features/home/presentation/widgets/books/products_grid_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CategoryView extends StatelessWidget {
   const CategoryView({super.key});
@@ -11,15 +14,27 @@ class CategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     const List<BookModel> books = BooksMock.books;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
-      child: Column(
-        children: [
-          SizedBox(height: 24),
-          Expanded(child: ProductsGridView(books: books)),
-          SizedBox(height: 24),
-        ],
-      ),
+    return Column(
+      children: [
+        const SizedBox(height: 16),
+        const BooksTabs(),
+        const SizedBox(height: 38),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: kAppHorizontalPadding,
+            ),
+            child: BlocBuilder<BooksCubit, BooksState>(
+              builder: (context, state) {
+                final cubit = context.read<BooksCubit>();
+                final filtered = cubit.getFilteredBooks(books);
+                return ProductsGridView(books: filtered);
+              },
+            ),
+          ),
+        ),
+        SizedBox(height: 24),
+      ],
     );
   }
 }

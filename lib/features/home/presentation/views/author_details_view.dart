@@ -14,20 +14,18 @@ class AuthorDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomBackAppbar(title: "Author Details"),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: kAppHorizontalPadding,
-            vertical: kAppVerticalPadding,
-          ),
-          child: Column(
-            spacing: 22,
-            children: [
-              AuthorInfo(author: author),
-              AboutAuthor(about: author.about),
-              AuthorProducts(),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: kAppHorizontalPadding,
+          vertical: kAppVerticalPadding,
+        ),
+        child: Column(
+          spacing: 22,
+          children: [
+            AuthorInfo(author: author),
+            AboutAuthor(about: author.about),
+            AuthorProducts(),
+          ],
         ),
       ),
     );

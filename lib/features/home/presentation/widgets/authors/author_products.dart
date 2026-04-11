@@ -13,13 +13,16 @@ class AuthorProducts extends StatelessWidget {
     const List<BookModel> books = BooksMock.books;
     final List<BookModel> limitedBooks = books.take(4).toList();
 
-    return Column(
-      spacing: 14,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("Products", style: AppStyles.bold16),
-        ProductsGridView(books: limitedBooks),
-      ],
+    return SizedBox(
+      height: 379,
+      child: Column(
+        spacing: 14,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Products", style: AppStyles.bold16),
+          Expanded(child: ProductsGridView(books: limitedBooks)),
+        ],
+      ),
     );
   }
 }
