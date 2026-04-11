@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../core/helpers/constants.dart';
-import '../../../data/mock/vendors_mock.dart';
 import '../../../data/models/vendor_model.dart';
 import 'vendor_card.dart';
 
 class BestVendorsListView extends StatelessWidget {
-  const BestVendorsListView({super.key});
+  final List<VendorModel> limitedVendors;
+  const BestVendorsListView({super.key, required this.limitedVendors});
 
   @override
   Widget build(BuildContext context) {
-    const List<VendorModel> vendors = VendorsMock.vendors;
-    final List<VendorModel> limitedVendors = vendors.take(5).toList();
     return SizedBox(
       height: 80,
       child: ListView.separated(

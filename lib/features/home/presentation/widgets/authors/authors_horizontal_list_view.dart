@@ -4,12 +4,11 @@ import 'author_card.dart';
 import 'package:flutter/material.dart';
 
 class AuthorsHorizontalListView extends StatelessWidget {
-  final List<AuthorModel> authors;
-  const AuthorsHorizontalListView({super.key, required this.authors});
+  final List<AuthorModel> limitedauthors;
+  const AuthorsHorizontalListView({super.key,required this.limitedauthors });
 
   @override
   Widget build(BuildContext context) {
-    final List<AuthorModel> limitedauthors = authors.take(3).toList();
     return SizedBox(
       height: 160,
       child: ListView.separated(

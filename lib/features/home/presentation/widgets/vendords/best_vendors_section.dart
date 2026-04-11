@@ -1,3 +1,5 @@
+import 'package:bazar_app/features/home/data/mock/vendors_mock.dart';
+import 'package:bazar_app/features/home/data/models/vendor_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,6 +12,8 @@ class BestVendorsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<VendorModel> vendors = VendorsMock.vendors;
+    final List<VendorModel> limitedVendors = vendors.take(5).toList();
     return Column(
       children: [
         CustomSectionHeader(
@@ -19,7 +23,7 @@ class BestVendorsSection extends StatelessWidget {
           },
         ),
         SizedBox(height: 16),
-        BestVendorsListView(),
+        BestVendorsListView(limitedVendors: limitedVendors),
       ],
     );
   }

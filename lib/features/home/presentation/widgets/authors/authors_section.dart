@@ -13,6 +13,8 @@ class AuthorsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const List<AuthorModel> authors = AuthorsMock.authors;
+    final List<AuthorModel> limitedauthors = authors.take(3).toList();
+
     return Column(
       children: [
         CustomSectionHeader(
@@ -22,7 +24,7 @@ class AuthorsSection extends StatelessWidget {
           },
         ),
         SizedBox(height: 30),
-        AuthorsHorizontalListView(authors: authors),
+        AuthorsHorizontalListView(limitedauthors: limitedauthors),
       ],
     );
   }

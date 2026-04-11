@@ -39,6 +39,7 @@ class VendordsView extends StatelessWidget {
               style: AppStyles.bold20.copyWith(color: AppColors.mainColor),
             ),
             const SizedBox(height: 30),
+            // Here
             VendordsGridView(vendors: vendors),
           ],
         ),
