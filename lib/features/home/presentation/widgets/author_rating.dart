@@ -1,10 +1,13 @@
+import 'package:bazar_app/core/theming/app_colors.dart';
+
 import '../../../../core/theming/app_assets.dart';
 import '../../../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AuthorRating extends StatelessWidget {
-  const AuthorRating({super.key});
+  final double rating;
+  const AuthorRating({super.key, required this.rating});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +20,19 @@ class AuthorRating extends StatelessWidget {
             5,
             (index) => Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2),
-              child: SvgPicture.asset(AppAssets.starIcon, height: 22),
+              child: SvgPicture.asset(
+                AppAssets.starIcon,
+                height: 22,
+                colorFilter: ColorFilter.mode(
+                  rating > index ? AppColors.goldColor : AppColors.black900,
+                  BlendMode.srcIn,
+                ),
+              ),
             ),
           ),
         ),
         SizedBox(width: 4),
-        Text("(4.5)", style: AppStyles.semiBold16),
+        Text("($rating)", style: AppStyles.semiBold16),
       ],
     );
   }

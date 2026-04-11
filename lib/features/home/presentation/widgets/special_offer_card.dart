@@ -27,9 +27,7 @@ class SpecialOfferCard extends StatelessWidget {
               Text("Special Offer", style: AppStyles.bold20),
               Text(
                 "Discount 25%",
-                style: AppStyles.regular14.copyWith(
-                  color: AppColors.lightBlack,
-                ),
+                style: AppStyles.regular14.copyWith(color: AppColors.black900),
               ),
               SizedBox(height: 14),
               AppTextButton(

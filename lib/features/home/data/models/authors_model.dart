@@ -4,6 +4,7 @@ class AuthorModel {
   final String image;
   final String spesiality;
   final String about;
+  final double rating;
 
   const AuthorModel({
     required this.name,
@@ -11,5 +12,6 @@ class AuthorModel {
     required this.id,
     required this.spesiality,
     required this.about,
+    required this.rating,
   });
 }

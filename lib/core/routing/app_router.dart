@@ -22,7 +22,7 @@ import 'routes.dart';
 abstract class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
-      initialLocation: Routes.mainView,
+      initialLocation: Routes.authorDetailsView,
       routes: [
         GoRoute(
           path: Routes.splashView,

@@ -10,6 +10,7 @@ class AuthorsMock {
       spesiality: "Writer",
       about:
           "American writer he  was the editor of the New York Times magazine from 1971 to 1973.",
+      rating: 3,
     ),
     AuthorModel(
       name: "Tess Gunty",
@@ -17,7 +18,8 @@ class AuthorsMock {
       id: "2",
       spesiality: "Novelist",
       about:
-          "Gunty was born and raised in south bend,indiana she went to college at the university of michigan.",
+          "Gunty was born and raised in South Bend, Indiana.She graduated from the University of Notre Dame with a Bachelor of Arts in English and from New York University.",
+      rating: 4,
     ),
     AuthorModel(
       name: "Richard Perston",
@@ -26,6 +28,7 @@ class AuthorsMock {
       spesiality: "Writer",
       about:
           "Perston was born and raised in south bend,indiana she went to college at the university of michigan.",
+      rating: 4,
     ),
   ];
 }
