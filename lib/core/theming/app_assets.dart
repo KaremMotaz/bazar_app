@@ -17,6 +17,8 @@ class AppAssets {
   static const String profileIcon = 'assets/svgs/profile_icon.svg';
   static const String categoryIcon = 'assets/svgs/category_icon.svg';
   static const String cartIcon = 'assets/svgs/cart_icon.svg';
+  static const String addIcon = 'assets/svgs/add_icon.svg';
+  static const String minusIcon = 'assets/svgs/minus_icon.svg';
 
   // images
   static const String onboarding1 = 'assets/images/onboarding1.png';

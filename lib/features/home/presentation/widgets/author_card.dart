@@ -13,7 +13,7 @@ class AuthorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.push(Routes.authorDetailsView);
+        context.push(Routes.authorDetailsView, extra: author);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

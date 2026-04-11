@@ -5,7 +5,7 @@ class BookModel {
   final List<String> vendors;
   final String price;
   final String description;
-  final double rate;
+  final double rating;
 
   const BookModel({
     required this.id,
@@ -13,7 +13,7 @@ class BookModel {
     required this.image,
     required this.price,
     required this.description,
-    required this.rate,
+    required this.rating,
     required this.vendors,
   });
 }

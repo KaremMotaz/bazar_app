@@ -7,15 +7,17 @@ import 'package:flutter_svg/svg.dart';
 
 class AuthorRating extends StatelessWidget {
   final double rating;
-  const AuthorRating({super.key, required this.rating});
+  final bool isCentered;
+  const AuthorRating({super.key, required this.rating, this.isCentered = true});
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: isCentered
+          ? MainAxisAlignment.center
+          : MainAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
             5,
             (index) => Padding(

@@ -1,3 +1,5 @@
+import 'package:bazar_app/features/home/data/models/authors_model.dart';
+
 import '../enums/verification_type.dart';
 import '../../features/auth/presentation/views/add_phone_number_view.dart';
 import '../../features/auth/presentation/views/congratulation_view.dart';
@@ -22,7 +24,7 @@ import 'routes.dart';
 abstract class AppRouter {
   static GoRouter createRouter() {
     return GoRouter(
-      initialLocation: Routes.authorDetailsView,
+      initialLocation: Routes.mainView,
       routes: [
         GoRoute(
           path: Routes.splashView,
@@ -117,7 +119,8 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.authorDetailsView,
           builder: (context, state) {
-            return const AuthorDetailsView();
+            final AuthorModel author = state.extra as AuthorModel;
+            return AuthorDetailsView(author: author);
           },
         ),
       ],

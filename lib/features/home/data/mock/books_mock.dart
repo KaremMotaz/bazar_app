@@ -11,7 +11,7 @@ class BooksMock {
       price: "14.99",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
-      rate: 4,
+      rating: 4,
     ),
     BookModel(
       id: "2",
@@ -21,7 +21,7 @@ class BooksMock {
       price: "57.99",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
-      rate: 4,
+      rating: 4,
     ),
     BookModel(
       id: "3",
@@ -31,7 +31,7 @@ class BooksMock {
       price: "25.99",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
-      rate: 4,
+      rating: 4,
     ),
     BookModel(
       id: "4",
@@ -41,7 +41,7 @@ class BooksMock {
       price: "30.99",
       description:
           "This book is about a boy named Kite Runner and his life as a boy in the desert.",
-      rate: 4,
+      rating: 4,
     ),
   ];
 }
