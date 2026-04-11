@@ -1,3 +1,5 @@
+import 'package:bazar_app/features/home/data/mock/special_offer_mock.dart';
+import 'package:bazar_app/features/home/data/models/special_offer_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -17,12 +19,17 @@ class _SpecialOffersSectionState extends State<SpecialOffersSection> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
+    const List<SpecialOfferModel> specialOffers =
+        SpecialOfferMock.specialOffers;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
       child: Column(
         children: [
           CarouselSlider(
-            items: List.generate(3, (index) => SpecialOfferCard()),
+            items: List.generate(
+              3,
+              (index) => SpecialOfferCard(specialOffer: specialOffers[index]),
+            ),
             options: CarouselOptions(
               height: 145,
               // autoPlay: true,

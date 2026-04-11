@@ -1,13 +1,13 @@
+import 'package:bazar_app/features/home/data/models/special_offer_model.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/helpers/constants.dart';
-import '../../../../../core/theming/app_assets.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
 import '../../../../../core/widgets/app_text_button.dart';
 
 class SpecialOfferCard extends StatelessWidget {
-  const SpecialOfferCard({super.key});
+  final SpecialOfferModel specialOffer;
+  const SpecialOfferCard({super.key, required this.specialOffer});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class SpecialOfferCard extends StatelessWidget {
             children: [
               Text("Special Offer", style: AppStyles.bold20),
               Text(
-                "Discount 25%",
+                "Discount ${specialOffer.discount}%",
                 style: AppStyles.regular14.copyWith(color: AppColors.black900),
               ),
               SizedBox(height: 14),
@@ -40,12 +40,11 @@ class SpecialOfferCard extends StatelessWidget {
               ),
             ],
           ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(3.5),
-            child: Image.asset(
-              AppAssets.specialOffer1,
-              fit: BoxFit.fitHeight,
-              width: 99,
+          AspectRatio(
+            aspectRatio: 0.68,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(3.5),
+              child: Image.asset(specialOffer.image, fit: BoxFit.fitHeight),
             ),
           ),
         ],

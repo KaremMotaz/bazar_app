@@ -26,6 +26,7 @@ class AppAssets {
   static const String onboarding3 = 'assets/images/onboarding3.png';
 
   static const String specialOffer1 = 'assets/images/special_offer_1.png';
+  static const String specialOffer2 = 'assets/images/special_offer_2.png';
 
   static const String book1 = 'assets/images/book1.png';
   static const String book2 = 'assets/images/book2.png';
