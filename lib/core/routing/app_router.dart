@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/data/models/authors_model.dart';
+import '../../features/home/data/models/authors_model.dart';
 
 import '../enums/verification_type.dart';
 import '../../features/auth/presentation/views/add_phone_number_view.dart';

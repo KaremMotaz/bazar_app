@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../data/models/book_model.dart';
-import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
   final BookModel book;

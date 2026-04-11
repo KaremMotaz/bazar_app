@@ -1,7 +1,7 @@
-import 'package:bazar_app/features/home/data/models/authors_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/about_author.dart';
-import 'package:bazar_app/features/home/presentation/widgets/author_info.dart';
-import 'package:bazar_app/features/home/presentation/widgets/author_products.dart';
+import '../../data/models/authors_model.dart';
+import '../widgets/about_author.dart';
+import '../widgets/author_info.dart';
+import '../widgets/author_products.dart';
 import '../../../../core/helpers/constants.dart';
 import '../widgets/custom_back_appbar.dart';
 import 'package:flutter/material.dart';

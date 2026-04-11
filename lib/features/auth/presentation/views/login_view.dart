@@ -1,12 +1,13 @@
+import 'package:flutter/material.dart';
+
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
 import '../widgets/dont_have_an_account.dart';
 import '../widgets/login_form.dart';
 import '../widgets/or_divider.dart';
 import '../widgets/social_login_button.dart';
-import 'package:flutter/material.dart';
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_assets.dart';
-import '../../../../core/theming/app_styles.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

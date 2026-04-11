@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../widgets/custom_back_appbar.dart';
 import '../widgets/custom_search_widget.dart';
-import 'package:flutter/material.dart';
 
 class VendordsView extends StatelessWidget {
   const VendordsView({super.key});

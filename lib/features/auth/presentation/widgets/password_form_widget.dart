@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/theming/app_styles.dart';
 import '../../../../core/widgets/app_text_form_field.dart';
-import 'package:flutter/material.dart';
 
 class PasswordFormWidget extends StatefulWidget {
   final TextEditingController passwordController;

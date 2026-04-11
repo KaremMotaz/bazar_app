@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../core/enums/verification_type.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import 'add_phone_field.dart';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class AddPhoneForm extends StatefulWidget {
   const AddPhoneForm({super.key});

@@ -1,9 +1,10 @@
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/theming/app_colors.dart';
-import 'special_offer_card.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_colors.dart';
+import 'special_offer_card.dart';
 
 class SpecialOffersSection extends StatefulWidget {
   const SpecialOffersSection({super.key});

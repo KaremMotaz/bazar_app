@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
-import '../widgets/add_phone_form.dart';
 import '../../../home/presentation/widgets/custom_back_appbar.dart';
-import 'package:flutter/material.dart';
+import '../widgets/add_phone_form.dart';
 
 class AddPhoneNumberView extends StatelessWidget {
   const AddPhoneNumberView({super.key});

@@ -1,7 +1,7 @@
-import 'package:bazar_app/core/theming/app_assets.dart';
-import 'package:bazar_app/core/theming/app_colors.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/custom_icon_button.dart';
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_colors.dart';
+import '../../../../../core/theming/app_styles.dart';
+import 'custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
 class BookQuantityAndPrice extends StatelessWidget {

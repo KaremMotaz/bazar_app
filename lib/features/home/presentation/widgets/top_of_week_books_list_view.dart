@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/helpers/constants.dart';
 import '../../data/mock/books_mock.dart';
 import '../../data/models/book_model.dart';
 import 'book_card.dart';
-import 'package:flutter/material.dart';
 
 class TopOfWeekBooksListView extends StatelessWidget {
   const TopOfWeekBooksListView({super.key});

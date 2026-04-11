@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import 'custom_section_header.dart';
 import 'top_of_week_books_list_view.dart';
-import 'package:flutter/material.dart';
 
 class TopOfWeekSection extends StatelessWidget {
   const TopOfWeekSection({super.key});

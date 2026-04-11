@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_colors.dart';
 import '../../../../core/theming/app_styles.dart';
 import '../../data/models/authors_model.dart';
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class AuthorCard extends StatelessWidget {
   final AuthorModel author;

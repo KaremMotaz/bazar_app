@@ -1,4 +1,4 @@
-import 'package:bazar_app/core/theming/app_styles.dart';
+import '../../../../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDescriptionSection extends StatelessWidget {

@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../data/mock/books_mock.dart';
 import 'product_card.dart';
-import 'package:flutter/material.dart';
 
 class ProductsGridView extends StatelessWidget {
   const ProductsGridView({super.key});

@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '../../../../core/helpers/constants.dart';
 import '../../data/mock/vendors_mock.dart';
 import '../../data/models/vendor_model.dart';
 import 'vendor_card.dart';
-import 'package:flutter/material.dart';
 
 class BestVendorsListView extends StatelessWidget {
   const BestVendorsListView({super.key});

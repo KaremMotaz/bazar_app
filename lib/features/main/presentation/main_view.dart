@@ -1,9 +1,10 @@
-import 'widgets/custom_app_bar.dart';
-import 'helpers/main_screens.dart';
-import 'manager/main_cubit/main_cubit.dart';
-import 'widgets/main_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'helpers/main_screens.dart';
+import 'manager/main_cubit/main_cubit.dart';
+import 'widgets/custom_app_bar.dart';
+import 'widgets/main_bottom_navigation_bar.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});

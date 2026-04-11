@@ -1,10 +1,11 @@
-import '../../core/routing/routes.dart';
-import '../../core/theming/app_colors.dart';
-import '../../core/theming/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../core/routing/routes.dart';
+import '../../core/theming/app_assets.dart';
+import '../../core/theming/app_colors.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

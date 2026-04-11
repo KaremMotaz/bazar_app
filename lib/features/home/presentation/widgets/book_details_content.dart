@@ -1,14 +1,14 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/home/data/models/book_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/author_rating.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_actions_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_description_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_header_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_image_section.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_quantity_and_price.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_drag_handle.dart';
-import 'package:bazar_app/features/home/presentation/widgets/book_details/book_vendor_image.dart';
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../data/models/book_model.dart';
+import 'author_rating.dart';
+import 'book_details/book_actions_section.dart';
+import 'book_details/book_description_section.dart';
+import 'book_details/book_header_section.dart';
+import 'book_details/book_image_section.dart';
+import 'book_details/book_quantity_and_price.dart';
+import 'book_details/book_drag_handle.dart';
+import 'book_details/book_vendor_image.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsContent extends StatelessWidget {

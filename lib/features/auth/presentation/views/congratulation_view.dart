@@ -1,13 +1,13 @@
-import '../../../../core/helpers/constants.dart';
-import '../../../../core/routing/routes.dart';
-import '../../../../core/theming/app_colors.dart';
-import '../../../../core/theming/app_styles.dart';
-import '../../../../core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/helpers/constants.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theming/app_assets.dart';
+import '../../../../core/theming/app_colors.dart';
+import '../../../../core/theming/app_styles.dart';
+import '../../../../core/widgets/app_text_button.dart';
 
 class CongratulationView extends StatelessWidget {
   const CongratulationView({super.key});

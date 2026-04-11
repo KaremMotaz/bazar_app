@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/presentation/widgets/book_details_content.dart';
+import 'book_details_content.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/app_styles.dart';
