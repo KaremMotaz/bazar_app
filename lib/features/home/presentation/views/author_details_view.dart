@@ -1,9 +1,9 @@
+import 'package:bazar_app/features/home/presentation/widgets/authors/author_products_grid_sliver.dart';
+import 'package:bazar_app/features/home/presentation/widgets/authors/custom_sliver_appbar.dart';
 import '../../data/models/authors_model.dart';
 import '../widgets/authors/about_author.dart';
 import '../widgets/authors/author_info.dart';
-import '../widgets/authors/author_products.dart';
-import '../../../../core/helpers/constants.dart';
-import '../widgets/shared/custom_back_appbar.dart';
+import '../widgets/authors/author_products_sliver_header.dart';
 import 'package:flutter/material.dart';
 
 class AuthorDetailsView extends StatelessWidget {
@@ -13,20 +13,18 @@ class AuthorDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomBackAppbar(title: "Author Details"),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: kAppHorizontalPadding,
-          vertical: kAppVerticalPadding,
-        ),
-        child: Column(
-          spacing: 22,
-          children: [
-            AuthorInfo(author: author),
-            AboutAuthor(about: author.about),
-            AuthorProducts(),
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: [
+          const CustomSliverAppBar(title: "Author Details"),
+          const SliverToBoxAdapter(child: SizedBox(height: 22)),
+          SliverToBoxAdapter(child: AuthorInfo(author: author)),
+          const SliverToBoxAdapter(child: SizedBox(height: 22)),
+          SliverToBoxAdapter(child: AboutAuthor(about: author.about)),
+          const SliverToBoxAdapter(child: SizedBox(height: 22)),
+          AuthorProductsSliverHeader(),
+          AuthorProductsGridSliver(),
+          const SliverToBoxAdapter(child: SizedBox(height: 30)),
+        ],
       ),
     );
   }

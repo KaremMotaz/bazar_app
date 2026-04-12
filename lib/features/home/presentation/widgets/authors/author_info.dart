@@ -1,3 +1,5 @@
+import 'package:bazar_app/core/helpers/constants.dart';
+
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
 import '../../../data/models/authors_model.dart';
@@ -10,23 +12,26 @@ class AuthorInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 51,
-          backgroundColor: AppColors.lightGray,
-          backgroundImage: AssetImage(author.image),
-        ),
-        SizedBox(height: 8),
-        Text(
-          author.spesiality,
-          style: AppStyles.regular16.copyWith(color: AppColors.black900),
-        ),
-        SizedBox(height: 10),
-        Text(author.name, style: AppStyles.bold20),
-        SizedBox(height: 22),
-        AuthorRating(rating: author.rating),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 51,
+            backgroundColor: AppColors.lightGray,
+            backgroundImage: AssetImage(author.image),
+          ),
+          SizedBox(height: 8),
+          Text(
+            author.spesiality,
+            style: AppStyles.regular16.copyWith(color: AppColors.black900),
+          ),
+          SizedBox(height: 10),
+          Text(author.name, style: AppStyles.bold20),
+          SizedBox(height: 22),
+          AuthorRating(rating: author.rating),
+        ],
+      ),
     );
   }
 }
