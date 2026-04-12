@@ -11,19 +11,17 @@ class AuthorsVerticalListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
-        child: ListView.separated(
-          itemCount: authors.length,
-          physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) {
-            return AuthorListCard(author: authors[index]);
-          },
-          separatorBuilder: (context, index) {
-            return const SizedBox(height: 32);
-          },
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
+      child: ListView.separated(
+        itemCount: authors.length,
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (context, index) {
+          return AuthorListCard(author: authors[index]);
+        },
+        separatorBuilder: (context, index) {
+          return const SizedBox(height: 32);
+        },
       ),
     );
   }

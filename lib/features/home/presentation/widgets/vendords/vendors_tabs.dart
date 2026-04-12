@@ -20,14 +20,14 @@ class VendorsTabs extends StatelessWidget {
     return BlocBuilder<VendorsCubit, VendorsState>(
       builder: (context, state) {
         return SizedBox(
-          height: 30,
+          height: 28,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: tabs.length,
             separatorBuilder: (_, _) => const SizedBox(width: 24),
             itemBuilder: (context, index) {
               final bool isSelected = state.selectedFilter.index == index;
-
+          
               return GestureDetector(
                 onTap: () {
                   context.read<VendorsCubit>().changeFilter(

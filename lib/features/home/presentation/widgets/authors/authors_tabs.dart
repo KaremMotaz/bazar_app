@@ -20,7 +20,7 @@ class AuthorsTabs extends StatelessWidget {
     return BlocBuilder<AuthorsCubit, AuthorsState>(
       builder: (context, state) {
         return SizedBox(
-          height: 30,
+          height: 28,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: tabs.length,

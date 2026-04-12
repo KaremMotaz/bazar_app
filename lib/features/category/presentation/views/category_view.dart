@@ -14,27 +14,36 @@ class CategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     const List<BookModel> books = BooksMock.books;
 
-    return Column(
-      children: [
-        const SizedBox(height: 16),
-        const BooksTabs(),
-        const SizedBox(height: 38),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: kAppHorizontalPadding,
-            ),
-            child: BlocBuilder<BooksCubit, BooksState>(
-              builder: (context, state) {
-                final cubit = context.read<BooksCubit>();
-                final filtered = cubit.getFilteredBooks(books);
-                return ProductsGridView(books: filtered);
-              },
-            ),
+    return NestedScrollView(
+      headerSliverBuilder: (context, innerBoxIsScrolled) => [
+        const SliverToBoxAdapter(child: SizedBox(height: 16)),
+        SliverAppBar(
+          pinned: true,
+          primary: false,
+          toolbarHeight: 0,
+          backgroundColor: Colors.white,
+          scrolledUnderElevation: 0,
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(28),
+            child: BooksTabs(),
           ),
         ),
-        SizedBox(height: 24),
+        const SliverToBoxAdapter(child: SizedBox(height: 30)),
       ],
+      body: Padding(
+        padding: const EdgeInsets.only(
+          left: kAppHorizontalPadding,
+          right: kAppHorizontalPadding,
+          bottom: kAppHorizontalPadding,
+        ),
+        child: BlocBuilder<BooksCubit, BooksState>(
+          builder: (context, state) {
+            final cubit = context.read<BooksCubit>();
+            final filtered = cubit.getFilteredBooks(books);
+            return ProductsGridView(books: filtered);
+          },
+        ),
+      ),
     );
   }
 }

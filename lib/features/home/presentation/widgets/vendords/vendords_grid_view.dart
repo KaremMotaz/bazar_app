@@ -9,21 +9,19 @@ class VendordsGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 18,
-            childAspectRatio: 0.66,
-          ),
-          itemCount: vendors.length,
-          itemBuilder: (context, index) {
-            return VendorGridItem(vendor: vendors[index]);
-          },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kAppHorizontalPadding),
+      child: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 18,
+          childAspectRatio: 0.66,
         ),
+        itemCount: vendors.length,
+        itemBuilder: (context, index) {
+          return VendorGridItem(vendor: vendors[index]);
+        },
       ),
     );
   }
