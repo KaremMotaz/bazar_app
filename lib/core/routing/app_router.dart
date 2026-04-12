@@ -1,3 +1,4 @@
+import 'package:bazar_app/core/animations/fade_only_transition_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -87,10 +88,12 @@ abstract class AppRouter {
         ),
         GoRoute(
           path: Routes.mainView,
-          builder: (context, state) {
-            return BlocProvider(
-              create: (context) => MainCubit(),
-              child: const MainView(),
+          pageBuilder: (context, state) {
+            return FadeOnlyTransitionPage(
+              child: BlocProvider(
+                create: (context) => MainCubit(),
+                child: const MainView(),
+              ),
             );
           },
         ),

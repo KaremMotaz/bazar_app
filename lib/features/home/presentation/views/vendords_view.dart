@@ -1,3 +1,5 @@
+import 'package:bazar_app/core/animations/slide_in.dart';
+
 import '../../data/mock/vendors_mock.dart';
 import '../../data/models/vendor_model.dart';
 import '../manager/vendors_cubit/vendors_cubit.dart';
@@ -25,7 +27,7 @@ class VendordsView extends StatelessWidget {
               child: CustomSearchWidget(),
             ),
           ),
-          const SliverToBoxAdapter(child: VendordsHeader()),
+          const SliverToBoxAdapter(child: SlideIn(child: VendordsHeader())),
           const SliverToBoxAdapter(child: SizedBox(height: 15)),
           SliverAppBar(
             pinned: true,
@@ -44,7 +46,10 @@ class VendordsView extends StatelessWidget {
           builder: (context, state) {
             final cubit = context.read<VendorsCubit>();
             final filtered = cubit.getFilteredVendors(vendors);
-            return VendordsGridView(vendors: filtered);
+            return SlideIn(
+              beginOffset: const Offset(1, 1),
+              child: VendordsGridView(vendors: filtered),
+            );
           },
         ),
       ),
