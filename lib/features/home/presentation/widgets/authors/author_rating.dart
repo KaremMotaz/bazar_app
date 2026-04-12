@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/presentation/widgets/shared/custom_rating.dart';
+import '../shared/custom_rating.dart';
 import '../../../../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 

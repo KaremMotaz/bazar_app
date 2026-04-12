@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../core/helpers/constants.dart';
 import '../../../data/models/authors_model.dart';
 import 'author_card.dart';
-import 'package:flutter/material.dart';
 
 class AuthorsHorizontalListView extends StatelessWidget {
   final List<AuthorModel> limitedauthors;

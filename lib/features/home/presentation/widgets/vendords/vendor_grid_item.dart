@@ -1,7 +1,7 @@
-import 'package:bazar_app/core/theming/app_styles.dart';
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/shared/custom_rating.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendords/vendor_card.dart';
+import '../../../../../core/theming/app_styles.dart';
+import '../../../data/models/vendor_model.dart';
+import '../shared/custom_rating.dart';
+import 'vendor_card.dart';
 import 'package:flutter/material.dart';
 
 class VendorGridItem extends StatelessWidget {

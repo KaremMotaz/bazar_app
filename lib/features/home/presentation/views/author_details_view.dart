@@ -1,5 +1,5 @@
-import 'package:bazar_app/features/home/presentation/widgets/authors/author_products_grid_sliver.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/custom_sliver_appbar.dart';
+import '../widgets/authors/author_products_grid_sliver.dart';
+import '../widgets/authors/custom_sliver_appbar.dart';
 import '../../data/models/authors_model.dart';
 import '../widgets/authors/about_author.dart';
 import '../widgets/authors/author_info.dart';

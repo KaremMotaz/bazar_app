@@ -1,7 +1,7 @@
-import 'package:bazar_app/features/home/data/mock/books_mock.dart';
-import 'package:bazar_app/features/home/data/models/book_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../../data/mock/books_mock.dart';
+import '../../../data/models/book_model.dart';
 import '../shared/custom_section_header.dart';
 import 'top_of_week_books_list_view.dart';
 

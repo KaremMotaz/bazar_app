@@ -1,8 +1,9 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/presentation/manager/vendors_cubit/vendors_cubit.dart';
-import 'package:bazar_app/features/home/presentation/widgets/shared/tap_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/helpers/constants.dart';
+import '../../manager/vendors_cubit/vendors_cubit.dart';
+import '../shared/tap_widget.dart';
 
 class VendorsTabs extends StatelessWidget {
   const VendorsTabs({super.key});

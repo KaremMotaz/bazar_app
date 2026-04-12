@@ -1,7 +1,8 @@
-import '../../../../../core/theming/app_assets.dart';
-import '../../../../../core/theming/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../../core/theming/app_assets.dart';
+import '../../../../../core/theming/app_styles.dart';
 
 class BookHeaderSection extends StatelessWidget {
   final String title;

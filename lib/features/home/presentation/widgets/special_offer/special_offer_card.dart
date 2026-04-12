@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/data/models/special_offer_model.dart';
+import '../../../data/models/special_offer_model.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/helpers/constants.dart';
 import '../../../../../core/theming/app_colors.dart';

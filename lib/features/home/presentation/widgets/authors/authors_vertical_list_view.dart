@@ -1,5 +1,5 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/author_list_card.dart';
+import '../../../../../core/helpers/constants.dart';
+import 'author_list_card.dart';
 
 import '../../../data/models/authors_model.dart';
 import 'package:flutter/material.dart';

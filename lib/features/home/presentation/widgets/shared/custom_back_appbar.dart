@@ -1,6 +1,7 @@
-import '../../../../../core/widgets/custom_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/widgets/custom_back_button.dart';
 
 class CustomBackAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;

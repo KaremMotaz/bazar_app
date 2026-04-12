@@ -1,4 +1,4 @@
-import 'package:bazar_app/features/home/data/models/book_model.dart';
+import '../../../data/models/book_model.dart';
 import 'package:flutter/material.dart';
 import 'product_card.dart';
 

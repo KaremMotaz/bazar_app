@@ -1,10 +1,10 @@
-import 'package:bazar_app/features/home/data/mock/vendors_mock.dart';
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
-import 'package:bazar_app/features/home/presentation/manager/vendors_cubit/vendors_cubit.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/custom_sliver_appbar.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendords/vendords_grid_view.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendords/vendords_header.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendords/vendors_tabs.dart';
+import '../../data/mock/vendors_mock.dart';
+import '../../data/models/vendor_model.dart';
+import '../manager/vendors_cubit/vendors_cubit.dart';
+import '../widgets/authors/custom_sliver_appbar.dart';
+import '../widgets/vendords/vendords_grid_view.dart';
+import '../widgets/vendords/vendords_header.dart';
+import '../widgets/vendords/vendors_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/shared/custom_search_widget.dart';

@@ -1,10 +1,11 @@
-import 'package:bazar_app/features/home/data/mock/special_offer_mock.dart';
-import 'package:bazar_app/features/home/data/models/special_offer_model.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../../core/helpers/constants.dart';
 import '../../../../../core/theming/app_colors.dart';
+import '../../../data/mock/special_offer_mock.dart';
+import '../../../data/models/special_offer_model.dart';
 import 'special_offer_card.dart';
 
 class SpecialOffersSection extends StatefulWidget {

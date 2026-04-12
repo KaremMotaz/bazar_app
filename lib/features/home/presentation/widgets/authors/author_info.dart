@@ -1,4 +1,4 @@
-import 'package:bazar_app/core/helpers/constants.dart';
+import '../../../../../core/helpers/constants.dart';
 
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';

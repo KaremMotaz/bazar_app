@@ -1,10 +1,10 @@
-import 'package:bazar_app/features/home/data/mock/authors_mock.dart';
-import 'package:bazar_app/features/home/data/models/authors_model.dart';
-import 'package:bazar_app/features/home/presentation/manager/authors_cubit/authors_cubit.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/authors_header.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/authors_tabs.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/authors_vertical_list_view.dart';
-import 'package:bazar_app/features/home/presentation/widgets/authors/custom_sliver_appbar.dart';
+import '../../data/mock/authors_mock.dart';
+import '../../data/models/authors_model.dart';
+import '../manager/authors_cubit/authors_cubit.dart';
+import '../widgets/authors/authors_header.dart';
+import '../widgets/authors/authors_tabs.dart';
+import '../widgets/authors/authors_vertical_list_view.dart';
+import '../widgets/authors/custom_sliver_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/shared/custom_search_widget.dart';

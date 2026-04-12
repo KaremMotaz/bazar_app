@@ -1,5 +1,5 @@
-import 'package:bazar_app/features/home/data/mock/authors_mock.dart';
-import 'package:bazar_app/features/home/data/models/authors_model.dart';
+import '../../../data/mock/authors_mock.dart';
+import '../../../data/models/authors_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

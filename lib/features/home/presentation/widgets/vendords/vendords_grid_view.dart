@@ -1,6 +1,6 @@
-import 'package:bazar_app/core/helpers/constants.dart';
-import 'package:bazar_app/features/home/data/models/vendor_model.dart';
-import 'package:bazar_app/features/home/presentation/widgets/vendords/vendor_grid_item.dart';
+import '../../../../../core/helpers/constants.dart';
+import '../../../data/models/vendor_model.dart';
+import 'vendor_grid_item.dart';
 import 'package:flutter/material.dart';
 
 class VendordsGridView extends StatelessWidget {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/helpers/constants.dart';
 import '../widgets/authors/authors_section.dart';
-import '../widgets/vendords/best_vendors_section.dart';
-import '../widgets/special_offer/special_offers_section.dart';
 import '../widgets/books/top_of_week_section.dart';
+import '../widgets/special_offer/special_offers_section.dart';
+import '../widgets/vendords/best_vendors_section.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

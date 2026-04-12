@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '../../../../../core/theming/app_assets.dart';
 import '../../../../../core/theming/app_colors.dart';
 import '../../../../../core/theming/app_styles.dart';
 import 'custom_icon_button.dart';
-import 'package:flutter/material.dart';
 
 class BookQuantityAndPrice extends StatelessWidget {
   final double price;

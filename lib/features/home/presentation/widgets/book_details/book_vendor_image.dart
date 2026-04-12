@@ -1,5 +1,6 @@
-import '../../../../../core/theming/app_assets.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/theming/app_assets.dart';
 
 class BookVendorImage extends StatelessWidget {
   const BookVendorImage({super.key});

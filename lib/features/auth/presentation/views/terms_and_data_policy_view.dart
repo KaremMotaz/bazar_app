@@ -1,5 +1,6 @@
-import '../../../home/presentation/widgets/shared/custom_back_appbar.dart';
 import 'package:flutter/material.dart';
+
+import '../../../home/presentation/widgets/shared/custom_back_appbar.dart';
 
 class TermsAndDataPolicyView extends StatelessWidget {
   const TermsAndDataPolicyView({super.key});
