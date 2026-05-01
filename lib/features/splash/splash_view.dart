@@ -1,9 +1,13 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/helpers/constants.dart';
 import '../../core/routing/routes.dart';
+import '../../core/services/cache_helper.dart';
 import '../../core/theming/app_assets.dart';
 import '../../core/theming/app_colors.dart';
 
@@ -19,9 +23,19 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () async {
       if (!mounted) return;
-      context.pushReplacement(Routes.onboardingView);
+      final bool hasSeenOnboarding = CacheHelper.getBool(
+        key: kHasSeenOnboarding,
+      );
+      final String? getToken = await CacheHelper.getSecureData(
+        key: 'accessToken',
+      );
+      hasSeenOnboarding
+          ? getToken != null
+                ? context.pushReplacement(Routes.mainView)
+                : context.pushReplacement(Routes.signInView)
+          : context.pushReplacement(Routes.onboardingView);
     });
   }
 

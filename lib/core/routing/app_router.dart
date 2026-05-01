@@ -1,7 +1,11 @@
 import 'package:bazar_app/core/animations/fade_only_transition_page.dart';
+import 'package:bazar_app/core/services/dio_client.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/auth/data/auth_repo.dart';
+import '../../features/auth/presentation/manager/login_cubit/login_cubit.dart';
+import '../../features/auth/presentation/manager/register_cubit/register_cubit.dart';
 import '../../features/auth/presentation/views/add_phone_number_view.dart';
 import '../../features/auth/presentation/views/congratulation_view.dart';
 import '../../features/auth/presentation/views/login_view.dart';
@@ -22,6 +26,7 @@ import '../../features/main/presentation/manager/main_cubit/main_cubit.dart';
 import '../../features/onboarding/presentation/views/onboarding_view.dart';
 import '../../features/splash/splash_view.dart';
 import '../enums/verification_type.dart';
+import '../services/api_service.dart';
 import 'routes.dart';
 
 abstract class AppRouter {
@@ -44,13 +49,21 @@ abstract class AppRouter {
         GoRoute(
           path: Routes.signInView,
           builder: (context, state) {
-            return const LoginView();
+            return BlocProvider(
+              create: (context) =>
+                  LoginCubit(AuthRepo(ApiService(DioClient.createDio()))),
+              child: const LoginView(),
+            );
           },
         ),
         GoRoute(
           path: Routes.signUpView,
           builder: (context, state) {
-            return const SignupView();
+            return BlocProvider(
+              create: (context) =>
+                  RegisterCubit(AuthRepo(ApiService(DioClient.createDio()))),
+              child: const SignupView(),
+            );
           },
         ),
         GoRoute(

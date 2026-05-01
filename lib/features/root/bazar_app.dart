@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../core/routing/app_router.dart';
 import '../../core/theming/app_styles.dart';
 
@@ -15,7 +14,7 @@ class BazarApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
           centerTitle: true,
-          titleTextStyle: AppStyles.bold20,          
+          titleTextStyle: AppStyles.bold20,
         ),
       ),
       routerConfig: AppRouter.createRouter(),

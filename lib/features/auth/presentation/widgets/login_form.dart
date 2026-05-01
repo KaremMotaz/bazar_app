@@ -1,8 +1,8 @@
+import 'package:bazar_app/features/auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../core/routing/routes.dart';
-import '../../../../core/services/cache_helper.dart';
 import '../../../../core/widgets/app_text_button.dart';
 import 'email_form_widget.dart';
 import 'forgot_password_widget.dart';
@@ -29,34 +29,41 @@ class _SignInFormState extends State<SignInForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          EmailFormWidget(emailController: emailController),
-          const SizedBox(height: 16),
-          PasswordFormWidget(passwordController: passwordController),
-          const SizedBox(height: 5),
-          ForgotPasswordWidget(),
-          const SizedBox(height: 24),
-          AppTextButton(
-            onPressed: () {
-              validateThenLogin(context);
-            },
-            buttonText: "Login",
-          ),
-        ],
+    return BlocListener<LoginCubit, LoginState>(
+      listener: (context, state) {
+        if (state is LoginSuccess) {
+          context.pushReplacement(Routes.mainView);
+        }
+      },
+      child: Form(
+        key: formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            EmailFormWidget(emailController: emailController),
+            const SizedBox(height: 16),
+            PasswordFormWidget(passwordController: passwordController),
+            const SizedBox(height: 5),
+            ForgotPasswordWidget(),
+            const SizedBox(height: 24),
+            AppTextButton(
+              onPressed: () {
+                validateThenLogin(context);
+              },
+              buttonText: "Login",
+            ),
+          ],
+        ),
       ),
     );
   }
 
   void validateThenLogin(BuildContext context) async {
-    await CacheHelper.set(key: "email", value: emailController.text);
-    await CacheHelper.set(key: "password", value: passwordController.text);
-    // ignore: use_build_context_synchronously
-    context.pushReplacement(Routes.mainView);
-
-    // if (formKey.currentState!.validate()) {}
+    if (formKey.currentState!.validate()) {
+      context.read<LoginCubit>().login(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    }
   }
 }

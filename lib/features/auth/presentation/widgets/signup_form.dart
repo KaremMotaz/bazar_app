@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../../core/enums/verification_type.dart';
 import '../../../../core/helpers/app_regex.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/app_text_button.dart';
+import '../manager/register_cubit/register_cubit.dart';
 import 'email_form_widget.dart';
 import 'name_form_widget.dart';
 import 'password_form_widget.dart';
@@ -46,34 +46,41 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey,
-      child: Column(
-        children: [
-          NameFormWidget(nameController: nameController),
-          const SizedBox(height: 16),
-          EmailFormWidget(emailController: emailController),
-          const SizedBox(height: 16),
-          PasswordFormWidget(passwordController: passwordController),
-          const SizedBox(height: 24),
-          if (showPasswordValidation) ...[
-            PasswordValidations(
-              hasLetter: hasLetter,
-              hasNumber: hasNumber,
-              hasMinLength: hasMinLength,
-            ),
+    return BlocListener<RegisterCubit, RegisterState>(
+      listener: (context, state) {
+        if (state is RegisterSuccess) {
+          context.pushReplacement(Routes.signInView);
+        }
+      },
+      child: Form(
+        key: formKey,
+        child: Column(
+          children: [
+            NameFormWidget(nameController: nameController),
+            const SizedBox(height: 16),
+            EmailFormWidget(emailController: emailController),
+            const SizedBox(height: 16),
+            PasswordFormWidget(passwordController: passwordController),
             const SizedBox(height: 24),
+            if (showPasswordValidation) ...[
+              PasswordValidations(
+                hasLetter: hasLetter,
+                hasNumber: hasNumber,
+                hasMinLength: hasMinLength,
+              ),
+              const SizedBox(height: 24),
+            ],
+            AppTextButton(
+              onPressed: () {
+                setState(() {
+                  showPasswordValidation = true;
+                });
+                validateThenSignup(context);
+              },
+              buttonText: "Register",
+            ),
           ],
-          AppTextButton(
-            onPressed: () {
-              setState(() {
-                showPasswordValidation = true;
-              });
-              validateThenSignup(context);
-            },
-            buttonText: "Register",
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -92,9 +99,14 @@ class _SignUpFormState extends State<SignUpForm> {
 
   void validateThenSignup(BuildContext context) {
     if (formKey.currentState!.validate()) {
-      context.pushReplacement(
-        Routes.otpVerificationView,
-        extra: {"type": VerificationType.email, "value": emailController.text},
+      // context.pushReplacement(
+      //   Routes.otpVerificationView,
+      //   extra: {"type": VerificationType.email, "value": emailController.text},
+      // );
+      context.read<RegisterCubit>().register(
+        name: nameController.text,
+        email: emailController.text,
+        password: passwordController.text,
       );
     }
   }
